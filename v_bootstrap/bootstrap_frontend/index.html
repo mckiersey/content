@@ -119,8 +119,8 @@
         locationHost = "127.0.0.1";
     }
 
-    document.getElementById('auth-form').action = locationHost + ":5555/auth";
-    document.getElementById('users-form').action = locationHost + ":5555/users";
+    document.getElementById('auth-form').action = "http://" + locationHost + ":5555/auth";
+    document.getElementById('users-form').action = "http://" + locationHost + ":5555/users";
 
 
 </script>
