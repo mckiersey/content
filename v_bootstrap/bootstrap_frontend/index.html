@@ -31,7 +31,7 @@
             <div class="row" align="center" id="signin_and_signup">
                 <div class="col-6" id="signin_col">
                     <h2 class="main_text_format">SIGN-IN</h2>
-                    <form action="http://127.0.0.1:5555/auth" method="POST">
+                    <form id="auth-form" action="http://127.0.0.1:5555/auth" method="POST">
                         <div class="row" align="center">
                             <div class="col-12">
                                 <input type="text" name="username" placeholder="Username" required>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="col-6" align="center">
                     <h2 class=" main_text_format">CREATE YOUR OWN PAGE</h2>
-                    <form action="http://127.0.0.1:5555/users" method="post">
+                    <form id='users-form' action="http://127.0.0.1:5555/users" method="post">
                         <div class="row">
                             <div class="col-12">
                                 <input type="text" name="username" placeholder="Username">
@@ -109,6 +109,19 @@
             });;
         });
     }
+
+
+    // location.host is host ip address, it's blank if you are not on a host
+    var locationHost = location.host;
+
+    // If location host is blank then you are working on it locally so set the host to location host
+    if (locationHost === "") {
+        locationHost = "127.0.0.1";
+    }
+
+    document.getElementById('auth-form').action = locationHost + ":5555/auth";
+    document.getElementById('users-form').action = locationHost + ":5555/users";
+
 
 </script>
 
