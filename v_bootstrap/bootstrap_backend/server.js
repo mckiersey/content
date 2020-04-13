@@ -92,7 +92,7 @@ app.post('/auth', function (request, response) {
                 if (results.length > 0) {
                     request.session.loggedin = true;
                     request.session.username = username;
-                    response.redirect('/home.html');
+                    response.redirect('http://63.33.214.25/home.html');
                 } else {
                     response.send('Incorrect Username and/or Password!');
                 }
