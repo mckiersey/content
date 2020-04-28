@@ -7,16 +7,11 @@ const config = {
     host: 'localhost',
     user: 'root',
     password: 'root',
-    database: 'nodelogin'
+    database: 'bootstrap'
 };
 
 
-//var connection = mysql.createConnection({
-//    host: 'localhost',
-//    user: 'root',
-//    password: 'root',
-//    database: 'nodelogin'
-//});
+
 
 // A MYSQL POOL ALLOWS FOR MULTIPLE CONNECTIONS AT ONCE
 

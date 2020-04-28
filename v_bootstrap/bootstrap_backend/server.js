@@ -43,12 +43,31 @@ const server = app.listen(port, (error) => {
 
 // FIRST GET
 
-routes(app)
+//routes(app)
 
 // BUILD DATA BRIDGE
 
 const pool = require('./data/config');
 
+
+app.get('/videos', function (request, response) {
+    console.log('The browser has requested data');
+
+    var fetchDatabase = require("./database/videoLinks.json")
+    return response.send({ fetchDatabase });
+});
+
+//Add a new videoLink
+app.post('/videos', (request, response) => {
+    console.log('post sent');
+    console.log(request.body);
+    //pool.query('INSERT INTO contentData SET ?', request.body, (error, result) => {
+      //  if (error) throw error;
+        //console.log(error);
+
+        //response.status(201).send(`Video added with ID: ${result.insertId}`);
+    //});
+});
 
 // GET ALL DATA
 app.get('/all_data', (request, response) => {
@@ -101,7 +120,9 @@ app.post('/auth', function (request, response) {
            } else {
     response.send('Please enter Username and Password!');
     response.end();
-}
+
+    };
+
 });
 
 
