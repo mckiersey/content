@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{FBC15850-24EA-4335-96D3-D0BFD286F540}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>thebookshelf</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)MyClass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)backend\.DS_Store" />
+    <None Include="$(MSBuildThisFileDirectory)backend\REST.html" />
+    <None Include="$(MSBuildThisFileDirectory)backend\js_code.js" />
+    <None Include="$(MSBuildThisFileDirectory)backend\database\embededLinks.json" />
+    <None Include="$(MSBuildThisFileDirectory)backend\database\.DS_Store" />
+    <None Include="$(MSBuildThisFileDirectory)backend\data\.Rhistory" />
+    <None Include="$(MSBuildThisFileDirectory)front\.DS_Store" />
+    <None Include="$(MSBuildThisFileDirectory)front\old\home.html" />
+    <None Include="$(MSBuildThisFileDirectory)front\old\js_code.js" />
+    <None Include="$(MSBuildThisFileDirectory)front\old\js_front_end.html" />
+    <None Include="$(MSBuildThisFileDirectory)front\data\videoLinks.json" />
+  </ItemGroup>
+</Project>
